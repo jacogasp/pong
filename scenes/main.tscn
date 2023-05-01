@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://blkic257bpcco"]
+[gd_scene load_steps=4 format=3 uid="uid://blkic257bpcco"]
 
 [ext_resource type="Texture2D" uid="uid://b2u8bgksqj83j" path="res://icon.svg" id="1_7q02j"]
 [ext_resource type="PackedScene" uid="uid://wv623s4xbwxu" path="res://scenes/arena.tscn" id="2_07lxb"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3_54x4r"]
 
 [node name="Main" type="Node2D"]
 metadata/_edit_vertical_guides_ = []
 
 [node name="GDExample" type="GDExample" parent="."]
 visible = false
-position = Vector2(9.81799, 0.000931801)
+position = Vector2(4.75766, 14.0215)
 texture = ExtResource("1_7q02j")
 
 [node name="arena" parent="." instance=ExtResource("2_07lxb")]
+
+[node name="player1" parent="." instance=ExtResource("3_54x4r")]
+position = Vector2(115, 306)
+
+[node name="player2" parent="." instance=ExtResource("3_54x4r")]
+position = Vector2(1037, 372)

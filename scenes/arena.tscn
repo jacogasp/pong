@@ -2,20 +2,21 @@
 
 [node name="arena" type="Node2D"]
 
-[node name="10" type="ReferenceRect" parent="."]
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 1128.0
-offset_bottom = 624.0
+[node name="Border" type="ReferenceRect" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1888.0
+offset_bottom = 1048.0
+pivot_offset = Vector2(960, 540)
 border_color = Color(1, 1, 1, 1)
-border_width = 15.0
+border_width = 20.0
 editor_only = false
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="Divider" type="ReferenceRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="GridContainer" type="GridContainer" parent="ReferenceRect"]
+[node name="GridContainer" type="GridContainer" parent="Divider"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,99 +31,124 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/v_separation = 15
+theme_override_constants/v_separation = 20
 
-[node name="ColorRect" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect2" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect2" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect3" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect3" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect4" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect4" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect5" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect5" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect6" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect6" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect7" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect7" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect8" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect8" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect9" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect9" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect10" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect10" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect11" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect11" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect12" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect12" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect13" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect13" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect14" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect14" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect15" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect15" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect16" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect16" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect17" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect17" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect18" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect18" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="ColorRect19" type="ColorRect" parent="ReferenceRect/GridContainer"]
-custom_minimum_size = Vector2(15, 15)
+[node name="ColorRect19" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect20" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect21" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect22" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect23" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect24" type="ColorRect" parent="Divider/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 4
