@@ -21,6 +21,7 @@ add_library(
   ${PROJECT_NAME} SHARED
   src/gdexample.cpp
   src/register_types.cpp
+  src/player.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC godot-cpp)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4b4uqjr4q5j"]
 
-[node name="player" type="Node2D"]
+[node name="player" type="Player"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8
