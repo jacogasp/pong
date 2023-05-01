@@ -1,15 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://blkic257bpcco"]
+[gd_scene load_steps=3 format=3 uid="uid://blkic257bpcco"]
 
 [ext_resource type="Texture2D" uid="uid://b2u8bgksqj83j" path="res://icon.svg" id="1_7q02j"]
+[ext_resource type="PackedScene" uid="uid://wv623s4xbwxu" path="res://scenes/arena.tscn" id="2_07lxb"]
 
 [node name="Main" type="Node2D"]
+metadata/_edit_vertical_guides_ = []
 
 [node name="GDExample" type="GDExample" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-position = Vector2(16.2993, 12.7088)
+visible = false
+position = Vector2(9.81799, 0.000931801)
 texture = ExtResource("1_7q02j")
-script = null
+
+[node name="arena" parent="." instance=ExtResource("2_07lxb")]
