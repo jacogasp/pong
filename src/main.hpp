@@ -11,11 +11,12 @@
 
 using namespace godot;
 
+class Arena;
 class Paddle;
 
 class Main : public Node2D {
   GDCLASS(Main, Node2D)
-
+  Arena* m_arena                      = nullptr;
   Paddle* m_paddle_left               = nullptr;
   std::unique_ptr<InputController> p1 = nullptr;
   Ref<PackedScene> m_ball             = nullptr;
@@ -30,12 +31,8 @@ class Main : public Node2D {
   void _ready() override;
   void _process(float dt);
 
-  void set_ball_scene(Ref<PackedScene> scene) {
-    m_ball = scene;
-  }
-  Ref<PackedScene> get_ball_scene() {
-    return m_ball;
-  }
+  void set_ball_scene(Ref<PackedScene> scene);
+  Ref<PackedScene> get_ball_scene();
 };
 
 #endif

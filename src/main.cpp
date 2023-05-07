@@ -19,11 +19,19 @@ void Main::_ready() {
   m_paddle_left = get_node<Paddle>("LPaddle");
   p1            = std::make_unique<InputController>(m_paddle_left);
 
-  auto const ball   = m_ball->instantiate();
+  auto const ball = m_ball->instantiate();
   add_child(ball);
 }
 
 void Main::_process(float dt) {
   auto command = p1->handle_input(dt);
   std::visit([&](auto& cmd) { cmd.execute(*m_paddle_left); }, command);
+}
+
+void Main::set_ball_scene(Ref<PackedScene> scene) {
+  m_ball = scene;
+}
+
+Ref<PackedScene> Main::get_ball_scene() {
+  return m_ball;
 }
