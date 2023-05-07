@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rt8eebwtvm0t"]
+
+[node name="Ball" type="Ball"]
+velocity = Vector2(-0.567253, 0.931012)
+speed = 500.0
+position = Vector2(-10025, 19210)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

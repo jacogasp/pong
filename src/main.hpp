@@ -2,11 +2,12 @@
 #define MAIN_HPP
 
 #include <godot_cpp/classes/node2d.hpp>
-#include <variant>
+#include <godot_cpp/classes/packed_scene.hpp>
+#include <godot_cpp/variant/utility_functions.hpp>
 #include <memory>
+#include <variant>
 
 #include "input_controller.hpp"
-
 
 using namespace godot;
 
@@ -15,8 +16,9 @@ class Paddle;
 class Main : public Node2D {
   GDCLASS(Main, Node2D)
 
-  Paddle* m_paddle_left;
-  std::unique_ptr<InputController> p1;
+  Paddle* m_paddle_left               = nullptr;
+  std::unique_ptr<InputController> p1 = nullptr;
+  Ref<PackedScene> m_ball             = nullptr;
 
  protected:
   static void _bind_methods();
@@ -27,6 +29,13 @@ class Main : public Node2D {
 
   void _ready() override;
   void _process(float dt);
+
+  void set_ball_scene(Ref<PackedScene> scene) {
+    m_ball = scene;
+  }
+  Ref<PackedScene> get_ball_scene() {
+    return m_ball;
+  }
 };
 
 #endif

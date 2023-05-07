@@ -26,6 +26,7 @@ add_library(
   src/paddle_controller.cpp
   src/input_controller.cpp
   src/main.cpp
+  src/ball.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC godot-cpp)

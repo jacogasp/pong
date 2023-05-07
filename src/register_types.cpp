@@ -3,9 +3,11 @@
 #include <godot_cpp/godot.hpp>
 #include <gdextension_interface.h>
 
+#include "ball.hpp"
 #include "gdexample.hpp"
-#include "paddle.hpp"
 #include "main.hpp"
+#include "paddle.hpp"
+
 #include "register_types.hpp"
 
 using namespace godot;
@@ -18,6 +20,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
   ClassDB::register_class<GDExample>();
   ClassDB::register_class<Paddle>();
   ClassDB::register_class<Main>();
+  ClassDB::register_class<Ball>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
