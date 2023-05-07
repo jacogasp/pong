@@ -1,21 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://blkic257bpcco"]
+[gd_scene load_steps=4 format=3 uid="uid://bnxj4sujrbetb"]
 
 [ext_resource type="Texture2D" uid="uid://b2u8bgksqj83j" path="res://icon.svg" id="1_7q02j"]
 [ext_resource type="PackedScene" uid="uid://wv623s4xbwxu" path="res://scenes/arena.tscn" id="2_07lxb"]
-[ext_resource type="PackedScene" uid="uid://c4b4uqjr4q5j" path="res://scenes/player.tscn" id="3_54x4r"]
+[ext_resource type="PackedScene" uid="uid://c4b4uqjr4q5j" path="res://scenes/Paddle.tscn" id="3_54x4r"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Main"]
 metadata/_edit_vertical_guides_ = []
 
 [node name="GDExample" type="GDExample" parent="."]
 visible = false
-position = Vector2(11.1934, 3.59094)
+position = Vector2(19.9501, 14.5077)
 texture = ExtResource("1_7q02j")
 
-[node name="arena" parent="." instance=ExtResource("2_07lxb")]
+[node name="Arena" parent="." instance=ExtResource("2_07lxb")]
 
-[node name="player1" parent="." instance=ExtResource("3_54x4r")]
+[node name="LPaddle" parent="." instance=ExtResource("3_54x4r")]
 position = Vector2(140, 540)
 
-[node name="player2" parent="." instance=ExtResource("3_54x4r")]
+[node name="RPaddle" parent="." instance=ExtResource("3_54x4r")]
 position = Vector2(1780, 540)

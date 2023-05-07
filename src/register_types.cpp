@@ -4,7 +4,8 @@
 #include <gdextension_interface.h>
 
 #include "gdexample.hpp"
-#include "player.hpp"
+#include "paddle.hpp"
+#include "main.hpp"
 #include "register_types.hpp"
 
 using namespace godot;
@@ -15,7 +16,8 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
   }
 
   ClassDB::register_class<GDExample>();
-  ClassDB::register_class<Player>();
+  ClassDB::register_class<Paddle>();
+  ClassDB::register_class<Main>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
