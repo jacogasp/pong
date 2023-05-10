@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+set(GODOT_CUSTOM_API_FILE "${CMAKE_SOURCE_DIR}/extension_api.json")
+message(${GODOT_CUSTOM_API_FILE})
+
 find_program(CCACHE ccache)
 if(CCACHE)
   message(STATUS "ccache found")
@@ -27,6 +30,7 @@ add_library(
   src/input_controller.cpp
   src/main.cpp
   src/ball.cpp
+  src/arena.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC godot-cpp)
