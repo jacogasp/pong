@@ -3,6 +3,7 @@
 #include <godot_cpp/godot.hpp>
 #include <gdextension_interface.h>
 
+#include "arena.hpp"
 #include "ball.hpp"
 #include "gdexample.hpp"
 #include "main.hpp"
@@ -21,6 +22,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
   ClassDB::register_class<Paddle>();
   ClassDB::register_class<Main>();
   ClassDB::register_class<Ball>();
+  ClassDB::register_class<Arena>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

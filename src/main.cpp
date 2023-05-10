@@ -1,5 +1,6 @@
 #include <godot_cpp/classes/resource_loader.hpp>
 
+#include "arena.hpp"
 #include "input_controller.hpp"
 #include "main.hpp"
 #include "paddle.hpp"
@@ -16,14 +17,16 @@ void Main::_bind_methods() {
 }
 
 void Main::_ready() {
+  m_arena       = get_node<Arena>("Arena");
   m_paddle_left = get_node<Paddle>("LPaddle");
   p1            = std::make_unique<InputController>(m_paddle_left);
-
   auto const ball = m_ball->instantiate();
+  ball->set("position", m_arena->get_arena_center());
   add_child(ball);
 }
 
 void Main::_process(float dt) {
+  // Handle Input
   auto command = p1->handle_input(dt);
   std::visit([&](auto& cmd) { cmd.execute(*m_paddle_left); }, command);
 }

@@ -7,18 +7,21 @@
 
 [node name="Main" type="Main"]
 ball_scene = ExtResource("1_rswwg")
+position = Vector2(0, 1)
 metadata/_edit_vertical_guides_ = []
 
 [node name="GDExample" type="GDExample" parent="."]
 visible = false
-position = Vector2(0.0195681, 0.59186)
+position = Vector2(17.9704, 2.29892)
 texture = ExtResource("1_7q02j")
 
 [node name="Arena" parent="." instance=ExtResource("2_07lxb")]
 position = Vector2(0, 4)
 
 [node name="LPaddle" parent="." instance=ExtResource("3_54x4r")]
-position = Vector2(140, 615)
+position = Vector2(140, 605)
 
 [node name="RPaddle" parent="." instance=ExtResource("3_54x4r")]
 position = Vector2(1780, 540)
+
+[connection signal="area_entered" from="Ball" to="Ball" method="_on_area_entered" flags=18]
