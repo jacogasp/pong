@@ -1,4 +1,4 @@
-#include <godot_cpp/classes/kinematic_collision2d.hpp>
+#include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/classes/random_number_generator.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
 
@@ -20,15 +20,18 @@ void Ball::_ready() {
 }
 
 void Ball::_physics_process(float delta) {
-  translate(m_velocity * m_speed * delta);
+  auto engine = Engine::get_singleton();
+  if (!engine->is_editor_hint()) {
+    translate(m_velocity * m_speed * delta);
+  }
 }
 
 void Ball::_on_area_entered(Area2D* area) {
   if (area->is_in_group("Walls")) {
     m_velocity.y *= -1;
-  } else if (area->is_in_group("Goals")) {
+  } else if (area->is_in_group("Goals") || area->is_in_group("Paddles")) {
     m_velocity.x *= -1;
-  }  
+  }
 }
 
 void Ball::set_velocity(Vector2 velocity) {

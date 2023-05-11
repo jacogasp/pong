@@ -4,9 +4,8 @@
 size = Vector2(40, 40)
 
 [node name="Ball" type="Ball"]
-velocity = Vector2(-0.809157, 0.879072)
+velocity = Vector2(0.535873, 0.376799)
 speed = 1000.0
-position = Vector2(-21440.6, 33467.1)
 collision_layer = 0
 collision_mask = 3
 

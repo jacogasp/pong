@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://c4b4uqjr4q5j"]
+[gd_scene load_steps=2 format=3 uid="uid://c4b4uqjr4q5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otm1c"]
+size = Vector2(20, 200)
 
 [node name="Paddle" type="Paddle"]
 
@@ -14,3 +17,8 @@ offset_right = 10.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Area2D" type="Area2D" parent="." groups=["Paddles"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_otm1c")
